@@ -4,6 +4,19 @@ json-attributed-string
 JSON Attributed String 	A simple utility used to create JSON objects designed to work with [NSMutableAttributedString+JSON](https://github.com/iksnae/NSMutableAttributedString_JSON) objective-c category.
 
 
+Supported Attributes:
+```objective-c
+NSFontAttributeName
+NSParagraphStyleAttributeName
+NSForegroundColorAttributeName
+NSBackgroundColorAttributeName
+NSLigatureAttributeName
+NSStrokeColorAttributeName
+NSStrokeWidthAttributeName
+NSShadowAttributeName
+NSAttachmentAttributeName
+NSLinkAttri
+
 Usage
 --------------
 ```javascript
