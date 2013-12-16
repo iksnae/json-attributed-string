@@ -1,3 +1,31 @@
+/*
+	JSON Attributed String
+	A simple utility used to create JSON objects designed to work with NSMutableAttributedString+JSON objective-c category.
+	
+	NSString *const NSFontAttributeName;
+	NSString *const NSParagraphStyleAttributeName;
+	NSString *const NSForegroundColorAttributeName;
+	NSString *const NSBackgroundColorAttributeName;
+	NSString *const NSLigatureAttributeName;
+	NSString *const NSKernAttributeName;
+	NSString *const NSStrikethroughStyleAttributeName;
+	NSString *const NSUnderlineStyleAttributeName;
+	NSString *const NSStrokeColorAttributeName;
+	NSString *const NSStrokeWidthAttributeName;
+	NSString *const NSShadowAttributeName;
+	NSString *const NSTextEffectAttributeName;
+	NSString *const NSAttachmentAttributeName;
+	NSString *const NSLinkAttributeName;
+	NSString *const NSBaselineOffsetAttributeName;
+	NSString *const NSUnderlineColorAttributeName;
+	NSString *const NSStrikethroughColorAttributeName;
+	NSString *const NSObliquenessAttributeName;
+	NSString *const NSExpansionAttributeName;
+	NSString *const NSWritingDirectionAttributeName;
+	NSString *const NSVerticalGlyphFormAttributeName;
+	
+	
+*/
 exports.createAttributedString = function( base_string )
 {
 	return new AttributedString(base_string);
@@ -76,7 +104,12 @@ exports.createAttachmentAttribute = function( image_url)
 	return attribute;
 }
 
-
+exports.createUnderlineStyleAttribute = function()
+{
+	var attribute = new Attribute();
+	attribute.createUnderlineStyleAttribute();
+	return attribute;
+}
 
 function Attribute()
 {
@@ -156,6 +189,13 @@ Attribute.prototype =
 	createAttachmentAttribute: function(image_url){
 		this.name = AttributeNames.Attachment;
 		this.value = image_url;
+	},
+	
+	createUnderlineStyleAttribute: function()
+	{
+		this.name = AttributeNames.Attachment;
+		this.value = UnderlineStyle.None;
+		this.color = "0x000000";
 	},
 	
 	/*
@@ -269,6 +309,25 @@ var TextAlignment =
 	Natural		: "Natural"
 }
 
+/*
+	Underline Style
+*/
+var UnderlineStyle = 
+{
+	None : 0x00,
+	Single : 0x01,
+	Thick : 0x02,
+	Double : 0x09,
+	PatternSolid : 0x0000,
+	PatternDot : 0x0100,
+	PatternDash : 0x0200,
+	PatternDashDot : 0x0300,
+	PatternDashDotDot : 0x0400,
+	ByWord : 0x8000	
+}
+
 // export constants
 exports.TextAlignment = TextAlignment;
 exports.AttributeNames = AttributeNames;
+exports.UnderlineStyle = UnderlineStyle;
+

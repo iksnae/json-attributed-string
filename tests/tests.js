@@ -32,10 +32,11 @@ printObjectWithName( stroke_width_attribute, "stroke_width_attribute" );
 var ligature_attribute = mod.createLigatureAttribute();
 printObjectWithName( ligature_attribute, "ligature_attribute" );
 
-
 var attachment_attribute = mod.createAttachmentAttribute("http://www.scientificamerican.com/media/inline/steve-jobs-legacy_1_thumb.jpg");
 printObjectWithName( attachment_attribute, "attachment_attribute" );
 
+var underline_style_attribute = mod.createUnderlineStyleAttribute();
+printObjectWithName( underline_style_attribute, "underline_style_attribute" );
 
 
 function printObjectWithName(object,name)
