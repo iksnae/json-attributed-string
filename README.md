@@ -15,7 +15,7 @@ NSStrokeColorAttributeName
 NSStrokeWidthAttributeName
 NSShadowAttributeName
 NSAttachmentAttributeName
-NSLinkAttri
+NSLinkAttribute
 ```
 
 Usage
