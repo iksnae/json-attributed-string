@@ -1,23 +1,22 @@
 {
-  "name": "json-attributed-string",
-  "version": "0.0.1",
-  "description": "	JSON Attributed String
-	A simple utility used to create JSON objects designed to work with NSMutableAttributedString+JSON objective-c category.",
-  "main": "index.js",
-  "scripts": {
-    "test": "for f in tests/*; do echo \"$f\"; node \"$f\"; done; echo 'passed!'; exit 0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/iksnae/json-attributed-string"
-  },
-  "keywords": [
-    "node",
-    "module",
-    "json",
-    "nsattributedstring",
-    "objective-c"
-  ],
-  "author": "Khalid Mills",
-  "license": "BSD"
+    "name": "json-attributed-string",
+    "version": "0.0.1",
+    "description": "JSON Attributed String. A simple utility used to create JSON objects designed to work with NSMutableAttributedString+JSON objective-c category.",
+    "main": "index.js",
+    "scripts": {
+        "test": "for f in tests/*; do echo \"$f\"; node \"$f\"; done; echo 'passed!'; exit 0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/iksnae/json-attributed-string"
+    },
+    "keywords": [
+        "node",
+        "module",
+        "json",
+        "nsattributedstring",
+        "objective-c"
+    ],
+    "author": "Khalid Mills",
+    "license": "BSD"
 }
