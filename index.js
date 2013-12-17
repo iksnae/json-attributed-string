@@ -111,6 +111,37 @@ exports.createUnderlineStyleAttribute = function()
 	return attribute;
 }
 
+exports.createUnderlineColorAttribute = function( color )
+{
+	var attribute = new Attribute();
+	attribute.createUnderlineColorAttribute( color );
+	return attribute;
+}
+
+exports.createKernAttribute = function( kerning )
+{
+	var attribute = new Attribute();
+	attribute.createKernAttribute(kerning);
+	return attribute;
+}
+
+exports.createStrikeThroughAttribute = function()
+{
+	var attribute = new Attribute();
+	attribute.createStrikeThroughAttribute();
+	return attribute;
+}
+
+exports.createStrikeThroughColorAttribute = function(color)
+{
+	var attribute = new Attribute();
+	attribute.createStrikeThroughColorAttribute(color);
+	return attribute;
+}
+
+
+
+
 function Attribute()
 {
 	this.name = "";
@@ -181,23 +212,49 @@ Attribute.prototype =
 		this.value = width;
 	},
 	
-	createLigatureAttribute: function(){
+	createLigatureAttribute: function()
+	{
 		this.name = AttributeNames.Ligature;
 		this.value = 1;
 	},
 	
-	createAttachmentAttribute: function(image_url){
+	createAttachmentAttribute: function(image_url)
+	{
 		this.name = AttributeNames.Attachment;
 		this.value = image_url;
 	},
 	
 	createUnderlineStyleAttribute: function()
 	{
-		this.name = AttributeNames.Attachment;
+		this.name = AttributeNames.UnderlineStyle;
 		this.value = UnderlineStyle.None;
-		this.color = "0x000000";
 	},
 	
+	createUnderlineColorAttribute: function( color )
+	{
+		this.name = AttributeNames.UnderlineColor;
+		this.value = color;
+	},
+	
+	createKernAttribute: function( kerning )
+	{
+		this.name = AttributeNames.Kern;
+		this.value = kerning;
+	},
+	
+	createStrikeThroughAttribute: function()
+	{
+		this.name = AttributeNames.Ligature;
+		this.value = UnderlineStyle.None;
+	},
+	
+	createStrikeThroughColorAttribute: function( color )
+	{
+		this.name = AttributeNames.StrikethroughColor;
+		this.value = color;
+	},
+	
+
 	/*
       Convenience methods for changing range's "startIndex" and "length" values
     */
@@ -294,40 +351,56 @@ var AttributeNames =
 	WritingDirection	: "WritingDirection",
 	VerticalGlyphForm	: "VerticalGlyphForm",
 	ParagraphStyle		: "ParagraphStyle"
-        
 }
+
+
 /*
 	Text Alignment
 	
 */
 var TextAlignment =
 {
-	Left		: "Left",
-	Center		: "Center",
-	Right		: "Right",
-	Justified	: "Justified",
-	Natural		: "Natural"
+	Left		: 0,
+	Right		: 1,
+	Center		: 2,
+	Justified	: 3,
+	Natural		: 4
 }
+
+
+/*
+	Writing Direction
+*/
+var WritingDirection = 
+{
+	Natural		: -1,
+	LeftToRight	: 0,
+	RightToLeft	: 1,
+	Embedding	: ( 0 << 1),
+	Override	: ( 1 << 1)
+}
+
 
 /*
 	Underline Style
 */
 var UnderlineStyle = 
 {
-	None : 0x00,
-	Single : 0x01,
-	Thick : 0x02,
-	Double : 0x09,
-	PatternSolid : 0x0000,
-	PatternDot : 0x0100,
-	PatternDash : 0x0200,
-	PatternDashDot : 0x0300,
-	PatternDashDotDot : 0x0400,
-	ByWord : 0x8000	
+	None				: 0x00,
+	Single				: 0x01,
+	Thick				: 0x02,
+	Double				: 0x09,
+	PatternSolid		: 0x0000,
+	PatternDot			: 0x0100,
+	PatternDash			: 0x0200,
+	PatternDashDot		: 0x0300,
+	PatternDashDotDot	: 0x0400,
+	ByWord				: 0x8000	
 }
 
-// export constants
-exports.TextAlignment = TextAlignment;
-exports.AttributeNames = AttributeNames;
-exports.UnderlineStyle = UnderlineStyle;
 
+// export constants
+exports.TextAlignment		= TextAlignment;
+exports.AttributeNames		= AttributeNames;
+exports.UnderlineStyle		= UnderlineStyle;
+exports.WritingDirection	= WritingDirection;
