@@ -139,7 +139,33 @@ exports.createStrikeThroughColorAttribute = function(color)
 	return attribute;
 }
 
+exports.createObliquenessAttribute = function( obliqueness )
+{
+	var attribute = new Attribute();
+	attribute.createObliquenessAttribute(obliqueness);
+	return attribute;
+}
 
+exports.createExpansionAttribute = function( expansion )
+{
+	var attribute = new Attribute();
+	attribute.createExpansionAttribute(expansion);
+	return attribute;
+}
+
+exports.createWritingDirectionAttribute = function( direction )
+{
+	var attribute = new Attribute();
+	attribute.createWritingDirectionAttribute(direction);
+	return attribute;
+}
+
+exports.createVericalGlyphFormAttribute = function( vertical_glyph_form )
+{
+	var attribute = new Attribute();
+	attribute.createVericalGlyphFormAttribute( vertical_glyph_form );
+	return attribute;
+}
 
 
 function Attribute()
@@ -254,6 +280,30 @@ Attribute.prototype =
 		this.value = color;
 	},
 	
+	createObliquenessAttribute: function( obliqueness )
+	{
+		this.name = AttributeNames.Obliqueness;
+		this.value = obliqueness;
+	},
+	
+	createExpansionAttribute: function( expansion )
+	{
+		this.name = AttributeNames.Expansion;
+		this.value = expansion;
+	},
+	
+	createWritingDirectionAttribute: function( direction )
+	{
+		this.name = AttributeNames.WritingDirection;
+		this.value = direction;
+	},
+	
+	createVericalGlyphFormAttribute: function( vertical_glyph_form )
+	{
+		this.name = AttributeNames.VerticalGlyphForm;
+		this.value = vertical_glyph_form;
+	},
+
 
 	/*
       Convenience methods for changing range's "startIndex" and "length" values

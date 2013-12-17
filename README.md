@@ -16,6 +16,14 @@ NSStrokeWidthAttributeName
 NSShadowAttributeName
 NSAttachmentAttributeName
 NSLinkAttribute
+NSUnderlineStyleAttributeName
+NSUnderlineColorAttributeName
+NSStrikethroughColorAttributeName
+NSStrikethroughStyleAttributeName
+NSObliquenessAttributeName
+NSExpansionAttributeName
+NSWritingDirectionAttributeName
+NSVerticalGlyphFormAttributeName
 ```
 
 Usage
