@@ -307,11 +307,11 @@ Attribute.prototype =
 
 
 	/*
-      Convenience methods for changing range's "startIndex" and "length" values
+      Convenience methods for changing range's "startLocation" and "length" values
     */
-	setRangeStartIndex: function(startIndex)
+	setRangeStartLocation: function(startLocation)
 	{
-		this.range.startIndex = startIndex;
+		this.range.startLocation = startLocation;
 	},
 	setRangeLength: function( rangeLength )
 	{
@@ -370,9 +370,9 @@ AttributedString.prototype =
 	}
 }
 
-function Range( startIndex, length )
+function Range( startLocation, length )
 {
-        this.startIndex = startIndex;
+        this.startLocation = startLocation;
         this.length = length;
 }
 

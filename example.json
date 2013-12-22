@@ -1,12 +1,12 @@
 {
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fermentum leo vitae pharetra semper. Duis eget ullamcorper leo.",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fermentum leo vitae pharetra semper. Duis eget ullamcorper leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fermentum leo vitae pharetra semper. Duis eget ullamcorper leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fermentum leo vitae pharetra semper. Duis eget ullamcorper leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fermentum leo vitae pharetra semper. Duis eget ullamcorper leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fermentum leo vitae pharetra semper. Duis eget ullamcorper leo. ",
     "attributes": [
         {
             "name": "Font",
             "value": 0,
             "range": {
-                "startIndex": 0,
-                "length": 62
+                "startLocation": 0,
+                "length": 312.5
             },
             "fontName": "Helvetica",
             "fontSize": 30
@@ -15,17 +15,24 @@
             "name": "ForegroundColor",
             "value": "0xffcc00",
             "range": {
-                "startIndex": 10,
+                "startLocation": 10,
                 "length": 10
             }
         },
-        null,
+        {
+            "name": "BackgroundColor",
+            "value": "0xff0000",
+            "range": {
+                "startLocation": 5,
+                "length": 25
+            }
+        },
         {
             "name": "ParagraphStyle",
             "value": "Custom",
             "range": {
-                "startIndex": 0,
-                "length": 124
+                "startLocation": 0,
+                "length": 625
             },
             "alignment": 0,
             "firstLineHeadIndent": 0,
@@ -41,7 +48,7 @@
             "name": "Link",
             "value": "http://google.com",
             "range": {
-                "startIndex": 50,
+                "startLocation": 50,
                 "length": 16
             }
         },
@@ -49,7 +56,7 @@
             "name": "Shadow",
             "value": "Custom",
             "range": {
-                "startIndex": 80,
+                "startLocation": 80,
                 "length": 20
             },
             "color": "0x000000",
@@ -62,15 +69,15 @@
             "name": "StrokeColor",
             "value": "0xff0000",
             "range": {
-                "startIndex": 100,
+                "startLocation": 100,
                 "length": 10
             }
         },
         {
             "name": "StrokeWidth",
-            "value": 20,
+            "value": 1,
             "range": {
-                "startIndex": 100,
+                "startLocation": 100,
                 "length": 10
             }
         },
@@ -78,15 +85,15 @@
             "name": "Ligature",
             "value": 1,
             "range": {
-                "startIndex": 0,
-                "length": 62
+                "startLocation": 0,
+                "length": 312.5
             }
         },
         {
             "name": "Attachment",
             "value": "http://www.scientificamerican.com/media/inline/steve-jobs-legacy_1_thumb.jpg",
             "range": {
-                "startIndex": 0,
+                "startLocation": 0,
                 "length": 10
             }
         },
@@ -94,7 +101,7 @@
             "name": "UnderlineStyle",
             "value": 0,
             "range": {
-                "startIndex": 4,
+                "startLocation": 4,
                 "length": 0
             }
         }
