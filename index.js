@@ -172,6 +172,7 @@ function Attribute()
 {
 	this.name = "";
 	this.value = 0;
+	this.range = new Range(0,0);
 }
 
 // attribute factory methods
@@ -314,6 +315,7 @@ Attribute.prototype =
 	},
 	setRangeLength: function( rangeLength )
 	{
+		
 		this.range.length = rangeLength;
 	}
 }

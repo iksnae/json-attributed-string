@@ -30,6 +30,8 @@ Usage
 --------------
 ```javascript
 var jsonas = require("json-attributed-string");
+var fs = require("fs");
+
 
 // test attributed string
 var test_att_string = new jsonas.AttributedString("The quick brown fox jumps over the lazy dog. Wafting zephyrs quickly vexed Jumbo. Jackdaws love my big sphinx of quartz.The quick brown fox jumps over the lazy dog. Wafting zephyrs quickly vexed Jumbo. Jackdaws love my big sphinx of quartz. ");
@@ -91,6 +93,13 @@ var attributes_array = [ attrib1, attrib2, attrib3, attrib4, attrib5, attrib6, a
 // add attributes to attributed string
 test_att_string.addAttributes(attributes_array);
 
+// write example.json file
+fs.writeFile('example.json', JSON.stringify(test_att_string,undefined,4), function (err) {
+  if (err) throw err;
+  console.log('It\'s saved!');
+});
+
+
 ```
 
 
@@ -99,41 +108,35 @@ Executing the code above generates the JSON below.
 
 ```json
 {
-    "text": "The quick brown fox jumps over the lazy dog. Wafting zephyrs quickly vexed Jumbo. Jackdaws love my big sphinx of quartz.The quick brown fox jumps over the lazy dog. Wafting zephyrs quickly vexed Jumbo. Jackdaws love my big sphinx of quartz. ",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fermentum leo vitae pharetra semper. Duis eget ullamcorper leo.",
     "attributes": [
         {
+            "name": "Font",
+            "value": 0,
             "range": {
                 "startIndex": 0,
-                "length": 120.5
+                "length": 62
             },
-            "name": "Font",
-            "value": "Arial",
-            "size": 30
+            "fontName": "Helvetica",
+            "fontSize": 30
         },
         {
+            "name": "ForegroundColor",
+            "value": "0xffcc00",
             "range": {
                 "startIndex": 10,
                 "length": 10
-            },
-            "name": "ForegroundColor",
-            "value": "0xff0000"
+            }
         },
+        null,
         {
-            "range": {
-                "startIndex": 5,
-                "length": 25
-            },
-            "name": "BackgroundColor",
-            "value": "0x00ff00"
-        },
-        {
-            "range": {
-                "startIndex": 0,
-                "length": 241
-            },
             "name": "ParagraphStyle",
             "value": "Custom",
-            "alignment": "Right",
+            "range": {
+                "startIndex": 0,
+                "length": 124
+            },
+            "alignment": 0,
             "firstLineHeadIndent": 0,
             "headIndent": 0,
             "tailIndent": 0,
@@ -144,29 +147,20 @@ Executing the code above generates the JSON below.
             "paragraphSpacingBefore": 0
         },
         {
-            "range": {
-                "startIndex": 50,
-                "length": 16
-            },
             "name": "Link",
-            "value": "http://google.com"
-        },
-        {
+            "value": "http://google.com",
             "range": {
                 "startIndex": 50,
                 "length": 16
-            },
-            "name": "Font",
-            "value": "Arial",
-            "size": 10
+            }
         },
         {
+            "name": "Shadow",
+            "value": "Custom",
             "range": {
                 "startIndex": 80,
                 "length": 20
             },
-            "name": "Shadow",
-            "value": "Custom",
             "color": "0x000000",
             "offset": {
                 "x": 1,
@@ -174,36 +168,44 @@ Executing the code above generates the JSON below.
             }
         },
         {
-            "range": {
-                "startIndex": 100,
-                "length": 10
-            },
             "name": "StrokeColor",
-            "value": "0xff0000"
-        },
-        {
+            "value": "0xff0000",
             "range": {
                 "startIndex": 100,
                 "length": 10
-            },
-            "name": "StrokeWidth",
-            "value": 2
+            }
         },
         {
+            "name": "StrokeWidth",
+            "value": 20,
+            "range": {
+                "startIndex": 100,
+                "length": 10
+            }
+        },
+        {
+            "name": "Ligature",
+            "value": 1,
             "range": {
                 "startIndex": 0,
-                "length": 120.5
-            },
-            "name": "Ligature",
-            "value": 1
+                "length": 62
+            }
         },
         {
+            "name": "Attachment",
+            "value": "http://www.scientificamerican.com/media/inline/steve-jobs-legacy_1_thumb.jpg",
+            "range": {
+                "startIndex": 0,
+                "length": 10
+            }
+        },
+        {
+            "name": "UnderlineStyle",
+            "value": 0,
             "range": {
                 "startIndex": 4,
                 "length": 0
-            },
-            "name": "Attachment",
-            "value": "http://www.scientificamerican.com/media/inline/steve-jobs-legacy_1_thumb.jpg"
+            }
         }
     ]
 }
