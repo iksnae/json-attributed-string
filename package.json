@@ -1,7 +1,7 @@
 {
     "name": "json-attributed-string",
-    "version": "0.0.2",
-    "description": "JSON Attributed String. A simple utility used to create JSON objects designed to work with NSMutableAttributedString+JSON objective-c category.",
+    "version": "0.0.3",
+    "description": "JSON Attributed String. \nA simple utility used to create JSON objects designed to work with NSMutableAttributedString+JSON objective-c category.",
     "main": "index.js",
     "scripts": {
         "test": "for f in tests/*; do echo \"$f\"; node \"$f\"; done; echo 'passed!'; exit 0"
